@@ -29,4 +29,7 @@ def create_app(test_config=None):
     def index():
         return 'This is the index page'
 
+    from . import db
+    db.init_app(app)
+
     return app
